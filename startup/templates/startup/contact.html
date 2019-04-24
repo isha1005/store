@@ -1,0 +1,66 @@
+{% extends "startup/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content%}
+
+<div class="slider">
+  <div > <img src="{% static 'startup/front2.jpeg' %}" alt=""> </div>
+  <div > <img src="{% static 'startup/Second.jpeg' %}" alt=""> </div>
+</div>
+
+<h1> Media Partner</h1>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <div class="content-section">
+     <img src="{% static 'startup/design1.png' %}" alt=""> </div>
+    </div>
+    <div class="col-md-4">
+        <div class="content-section">
+     <img src="{% static 'startup/design2.jpeg' %}" alt=""> </div>
+    </div>
+    <div class="col-md-4" id="over">
+        <div class="content-section" >
+     <img src="{% static 'startup/design3.jpeg' %}" alt="" > </div>
+    </div>
+</div>
+
+<h1> Contact Us </h1>
+<br>
+    <div class="row">
+    <div class="col-md-7">
+        <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Enquiries</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Send</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+        <div class="col-md-5">
+              <div class="container">
+                <h3>Still Waiting? Start Selling! Hurry Up ☺</h3>
+
+                    <p class="text-muted">Email -  members@startupsstore.com</p>
+                    <p class="text-muted">Handphone - 74063-74063</p>
+                    <p class='text-muted'>Website <a  href="https://bit.ly/2JnbLAt">http://www.startupsstore.com/</a></p>
+                    <p class='text-muted'>Register <a href="https://bit.ly/2AJK1zG"> https://bit.ly/2AJK1zG</a></p>
+              </div>
+                <div class="container">
+                    <p class='text-muted'>Not ready to  talk with someone?
+
+            </p>
+                    <p class='text-muted'>Check out our comprehensive <a class="navbar-brand mr-4" href="{% url 'startup-faq' %}"> Help Center & FAQ</a></p>
+                </div>
+        </div>
+
+    </div>
+
+
+{% endblock content%}

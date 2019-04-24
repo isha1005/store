@@ -1,0 +1,13 @@
+{% extends "startup/base.html" %}
+{% block additional_styles %}
+    <style>
+        body {
+        background: #fdfd96;;
+        }
+    </style>
+    {% endblock additional_styles %}
+
+{% block content%}
+<h1> About Us</h1>
+{{ about.body_block|safe }}
+{% endblock content%}

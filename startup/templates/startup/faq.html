@@ -1,0 +1,27 @@
+{% extends "startup/base.html" %}
+{% block additional_styles %}
+    <style>
+        body {
+        background: #fdfd96;
+        }
+    </style>
+    {% endblock %}
+{% block content %}
+<div >
+    <h1>Frequently Asked Questions☺</h1>
+    <p class="text-muted">Our team's always here to talk it out, just reach out by phone or email.</p>
+    <br>
+</div>
+<div class="row">
+    {% for faq in faqs%}
+    <div class="col-md-6">
+        <div class="content-section">
+            <h5> {{ faq.title|safe }} </h5>
+             {{ faq.block_body|safe }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock content%}
