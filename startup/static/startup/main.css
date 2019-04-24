@@ -10,32 +10,7 @@ height: 100%;
  width:100%;
  }
 
-article {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    position:relative;
-    padding-bottom:60px;
-}
 
-main {
-    flex-grow: 1;
-}
-
-header, main, footer {
-    flex-shrink: 0;
-}
-
-
-#f{
- background: #000000;
- clear:both;
- height: 60px;
- min-width: 1200px;
- width: 100%;
- bottom:0;
-}
 
 
 h1, h2, h3, h4, h5, h6 {
