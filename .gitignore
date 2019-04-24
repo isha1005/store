@@ -1,8 +1,6 @@
 *.pyc
 *~
 __pycache__
-girls
-db.sqlite3
 /static
 .DS_Store
 local_settings.py
